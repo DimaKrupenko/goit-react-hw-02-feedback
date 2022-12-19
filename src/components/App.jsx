@@ -65,9 +65,9 @@ class App extends React.Component {
        
         <Section title="Please leave feedback"/>
         <FeedbackOptions
-          goodClick={this.handleGood}
-          neutralClick={this.handleNeutral}
-          badClick={this.handleBad}
+          good={this.handleGood}
+          neutral={this.handleNeutral}
+          bad={this.handleBad}
         />
         
         {this.countTotalFeedback() === 0 ? <Notification message="There is no feedback"/>
