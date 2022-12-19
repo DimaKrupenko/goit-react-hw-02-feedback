@@ -1,0 +1,13 @@
+.button {
+  width: 70px;
+}
+.button:hover {
+  background-color: wheat;
+  border: 1px solid black;
+}
+
+.buttonConteiner {
+  gap: 10px;
+  display: flex;
+  margin-left: 20px;
+}

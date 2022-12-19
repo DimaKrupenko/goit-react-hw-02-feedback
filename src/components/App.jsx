@@ -1,8 +1,8 @@
-import FeedbackOptions from './Feedback/FeedbackOptions'
+import FeedbackOptions from './Feedback/FeedbackOptions/FeedbackOptions'
 import React from 'react';
-import Statistics  from './Feedback/Statistics';
-import Section from './Feedback/Section';
-import Notification from './Feedback/Notification'
+import Statistics  from './Feedback/Statistics/Statistics';
+import Section from './Feedback/Section/Section';
+import Notification from './Feedback/Notification/Notification'
 
 class App extends React.Component {
   state = {
@@ -55,11 +55,20 @@ class App extends React.Component {
   render() {
     return (
       
-      <div>
+      <div
+       style={{
+        height: '100vh',
+        fontSize: 30,
+        color: '#010101'
+      }}
+>
+       
         <Section title="Please leave feedback"/>
-        <FeedbackOptions goodClick={this.handleGood}
+        <FeedbackOptions
+          goodClick={this.handleGood}
           neutralClick={this.handleNeutral}
-          badClick={this.handleBad} />
+          badClick={this.handleBad}
+        />
         
         {this.countTotalFeedback() === 0 ? <Notification message="There is no feedback"/>
          :
