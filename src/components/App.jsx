@@ -7,7 +7,7 @@ import Notification from './Feedback/Notification/Notification'
 class App extends React.Component {
   state = {
     good: 0,
-    neutral: 0,
+    netural: 0,
     bad: 0,
   }
   countTotalFeedback = (state) => {
