@@ -12,7 +12,7 @@ class App extends React.Component {
   }
   countTotalFeedback = (state) => {
         let result = 0
-        result = this.state.good + this.state.neutral + this.state.bad
+        result = this.state.good + this.state.netural + this.state.bad
         
         return result    
   }
