@@ -26,31 +26,16 @@ class App extends React.Component {
         return procent
   }
   
-   handleGood = () => {
-       
+   handleClick = (evt) => {
+       const id = evt.target.getAttribute('id')
         this.setState((prevState) => {
             return {
-                good: 3,
+                [id]: prevState[id] + 1
             }
         })
         
    }
   
-  handleNeutral = () => {
-        this.setState((prevState) => {
-            return {
-                neutral: 2,
-            }
-        })
-  }
-  
-  handleBad = () => {
-          this.setState((prevState) => {
-              return {
-                  bad: 2,
-              }
-        })
-     }
 
   render() {
     return (
@@ -65,9 +50,8 @@ class App extends React.Component {
        
         <Section title="Please leave feedback"/>
         <FeedbackOptions
-          good={this.handleGood}
-          neutral={this.handleNeutral}
-          bad={this.handleBad}
+          options={this.state}
+          onLeaveFeedback={this.handleClick}
         />
         
         {this.countTotalFeedback() === 0 ? <Notification message="There is no feedback"/>
