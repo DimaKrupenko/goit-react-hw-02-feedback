@@ -57,7 +57,7 @@ class App extends React.Component {
         {this.countTotalFeedback() === 0 ? <Notification message="There is no feedback"/>
          :
        <Statistics good={this.state.good}
-          neutral={this.state.neutral}
+          netural={this.state.netural}
           bad={this.state.bad}
           total={this.countTotalFeedback()}
           positiveFeedback={this.countPositiveFeedbackPercentage()}/>}
